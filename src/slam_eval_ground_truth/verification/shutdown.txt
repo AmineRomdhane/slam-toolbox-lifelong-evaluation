@@ -1,0 +1,2 @@
+^C[INFO] [1789410491.483798114] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Ground-truth counters: received=5897 published=5868 missing_entity_messages=29 time_resets=0 entity_id_changes=0 invalid_messages=0 duplicate_stamps=0

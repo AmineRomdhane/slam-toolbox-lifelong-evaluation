@@ -1,0 +1,94 @@
+{
+  "window_wall_seconds": 30,
+  "samples": 1759,
+  "source_parse_errors": [],
+  "extractor_endpoints": {
+    "publishers": [
+      [
+        "/ground_truth/pose",
+        [
+          "geometry_msgs/msg/PoseStamped"
+        ]
+      ],
+      [
+        "/parameter_events",
+        [
+          "rcl_interfaces/msg/ParameterEvent"
+        ]
+      ],
+      [
+        "/rosout",
+        [
+          "rcl_interfaces/msg/Log"
+        ]
+      ]
+    ],
+    "subscriptions": [
+      [
+        "/parameter_events",
+        [
+          "rcl_interfaces/msg/ParameterEvent"
+        ]
+      ]
+    ]
+  },
+  "wall_hz": 58.61992505127695,
+  "stamp_hz": 58.62931465732866,
+  "non_increasing_stamps": 0,
+  "exact_gazebo_stamp_matches": 1759,
+  "exact_ros_clock_stamp_matches": 1759,
+  "frame_ids": [
+    "gazebo_world"
+  ],
+  "pose_minus_latest_received_clock_seconds": {
+    "min": -0.001,
+    "max": 0.003
+  },
+  "pose_samples": [
+    {
+      "sec": 5307,
+      "nanosec": 455000000,
+      "xyz": [
+        -2.0142317230121267,
+        -0.4999999999690055,
+        0.010008796970730616
+      ],
+      "quaternion_xyzw": [
+        -3.491018851511975e-09,
+        -0.00622975788085118,
+        -1.3907433186460826e-08,
+        0.9999805948700934
+      ]
+    },
+    {
+      "sec": 5322,
+      "nanosec": 439000000,
+      "xyz": [
+        -2.0142317230121267,
+        -0.4999999999690055,
+        0.010008796970730616
+      ],
+      "quaternion_xyzw": [
+        -3.491018851511975e-09,
+        -0.00622975788085118,
+        -1.3907433186460826e-08,
+        0.9999805948700934
+      ]
+    },
+    {
+      "sec": 5337,
+      "nanosec": 440000000,
+      "xyz": [
+        -2.0142317230121267,
+        -0.4999999999690055,
+        0.010008796970730616
+      ],
+      "quaternion_xyzw": [
+        -3.491018851511975e-09,
+        -0.00622975788085118,
+        -1.3907433186460826e-08,
+        0.9999805948700934
+      ]
+    }
+  ]
+}
