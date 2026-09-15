@@ -1,0 +1,16 @@
+generation_*/
+*.npy
+*.pgm
+*.png
+ideal_observed_map.yaml
+generation_metadata.json
+grid_metadata.json
+validation.json
+determinism.json
+interpolation.json
+provenance.json
+*_poses.csv
+canonical_gt.csv
+rays.csv
+reference_world.sdf
+reference_sensor.sdf

@@ -1,0 +1,24 @@
+{
+  "canonical_scans": 855,
+  "first_scan_ns": 11000000000,
+  "first_gt_ns": 11008000000,
+  "first_scan_policy": "omit_no_GT_bracket",
+  "scans_used": 854,
+  "exact": 49,
+  "interpolated": 805,
+  "extrapolate": false,
+  "physical_lidar_xyz_m": [
+    -0.032,
+    0,
+    0.171
+  ],
+  "ros_base_scan_xyz_m": [
+    -0.032,
+    0,
+    0.182
+  ],
+  "discrepancy_m": 0.011,
+  "normal_noise_sigma_m": 0.01,
+  "reference_noise_sigma_m": 0,
+  "map_resolution_m": 0.05
+}

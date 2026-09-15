@@ -1,0 +1,16 @@
+{
+  "process_returncode_before_stop": null,
+  "command": [
+    "gz",
+    "sim",
+    "-s",
+    "--headless-rendering",
+    "-v",
+    "3",
+    "/home/roam5170/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/worlds/turtlebot3_world.world"
+  ],
+  "services": "/gazebo/resource_paths/add\n/gazebo/resource_paths/get\n/gazebo/resource_paths/resolve\n/gazebo/worlds\n/server_control\n/world/default/control\n/world/default/control/state\n/world/default/create\n/world/default/create/blocking\n/world/default/create_multiple\n/world/default/create_multiple/blocking\n/world/default/declare_parameter\n/world/default/disable_collision\n/world/default/disable_collision/blocking\n/world/default/enable_collision\n/world/default/enable_collision/blocking\n/world/default/entity/system/add\n/world/default/generate_world_sdf\n/world/default/get_parameter\n/world/default/gui/info\n/world/default/level/set_performer\n/world/default/light_config\n/world/default/light_config/blocking\n/world/default/list_parameters\n/world/default/playback/control\n/world/default/remove\n/world/default/remove/blocking\n/world/default/scene/graph\n/world/default/scene/info\n/world/default/set_parameter\n/world/default/set_physics\n/world/default/set_physics/blocking\n/world/default/set_pose\n/world/default/set_pose/blocking\n/world/default/set_pose_vector\n/world/default/set_pose_vector/blocking\n/world/default/set_spherical_coordinates\n/world/default/set_spherical_coordinates/blocking\n/world/default/state\n/world/default/state_async\n/world/default/system/info\n/world/default/visual_config\n/world/default/visual_config/blocking\n/world/default/wheel_slip\n/world/default/wheel_slip/blocking\n",
+  "set_pose": "Service providers [Address, Request Message Type, Response Message Type]:\n  tcp://172.20.8.26:45949, gz.msgs.Pose, gz.msgs.Boolean\n",
+  "control": "Service providers [Address, Request Message Type, Response Message Type]:\n  tcp://172.20.8.26:45949, gz.msgs.WorldControl, gz.msgs.Boolean\n",
+  "scene": "Service providers [Address, Request Message Type, Response Message Type]:\n  tcp://172.20.8.26:45949, gz.msgs.Empty, gz.msgs.Scene\n"
+}

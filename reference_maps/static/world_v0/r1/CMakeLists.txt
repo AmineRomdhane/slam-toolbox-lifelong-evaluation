@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(v0_reference_probe LANGUAGES CXX)
+find_package(sdformat14 REQUIRED)
+add_executable(inspect inspect.cpp)
+target_link_libraries(inspect sdformat14::sdformat14)
