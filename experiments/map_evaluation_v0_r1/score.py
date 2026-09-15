@@ -44,6 +44,8 @@ def confusion(truth,pred):
 def aggregate(values,seed):
  a=np.array([x for x in values if x is not None],float)
  if not len(a):return {'n':0,'mean':None,'sd':None,'median':None,'iqr':None,'min':None,'max':None,'bootstrap_mean_95_ci':None}
+ if np.all(a==a[0]):
+  v=float(a[0]);return {'n':len(a),'mean':v,'sd':0. if len(a)>1 else None,'median':v,'q1':v,'q3':v,'iqr':0.,'min':v,'max':v,'bootstrap_mean_95_ci':[v,v]}
  rng=np.random.default_rng(seed);means=rng.choice(a,size=(20000,len(a)),replace=True).mean(axis=1);q=np.quantile(a,[.25,.75])
  return {'n':len(a),'mean':float(a.mean()),'sd':float(a.std(ddof=1)) if len(a)>1 else None,'median':float(np.median(a)),'q1':float(q[0]),'q3':float(q[1]),'iqr':float(q[1]-q[0]),'min':float(a.min()),'max':float(a.max()),'bootstrap_mean_95_ci':np.quantile(means,[.025,.975]).tolist()}
 

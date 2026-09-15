@@ -1,8 +1,10 @@
 import unittest,tempfile
 from pathlib import Path
 import numpy as np
-from score import boundary,confusion,resample,load_map
+from score import boundary,confusion,resample,load_map,aggregate
 class Tests(unittest.TestCase):
+ def test_constant_statistics(self):
+  v=.7083906464924347;s=aggregate([v]*10,1);self.assertEqual(s['mean'],v);self.assertEqual(s['sd'],0);self.assertEqual(s['bootstrap_mean_95_ci'],[v,v])
  def test_unknown_is_false_negative(self):
   c=confusion(np.array([1,1,0],bool),np.array([1,0,1],bool));self.assertEqual([c[k] for k in ['tp','fp','fn','tn']],[1,1,1,0]);self.assertAlmostEqual(c['occupied_iou'],1/3)
  def test_no_unknown_crop_boundary(self):
