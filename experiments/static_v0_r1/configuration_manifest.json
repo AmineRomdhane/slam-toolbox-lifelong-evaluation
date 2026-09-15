@@ -1,0 +1,16 @@
+{
+  "installed_source": "/opt/ros/jazzy/share/slam_toolbox/config/mapper_params_online_async.yaml",
+  "installed_source_sha256": "a47dcd2ade5929b491d1897df539dceeabaaa3bfe6dc0d39f1f7af6c53d79a8c",
+  "configuration_sha256": "7a9930fd1e5fea1e798c6cea1e2fe08827cd59b58d4a5902997204f91ac8f937",
+  "previous_configuration_sha256": "e9063f1fc6f77189bcb29d630873286a590d138ace3cfbd767de145a2174918a",
+  "parameter_changes_from_installed": {
+    "use_sim_time": true,
+    "max_laser_range": 3.5
+  },
+  "change_from_pilot_1": {
+    "max_laser_range": {
+      "old": 20.0,
+      "new": 3.5
+    }
+  }
+}
