@@ -22,7 +22,11 @@ def validate(folder):
  checks['near_route_posts_observed']=all(v['first_hit_endpoints_within_1cm_of_surface']>0 for v in post if v['center_xy'][0]==-1.1)
  # Known body mesh inner/outer wall coordinates, for diagnostic validation only.
  mesh=Path('/home/roam5170/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_world/meshes/wall.dae');ns={'c':'http://www.collada.org/2005/11/COLLADASchema'};root=ET.parse(mesh);v=np.fromstring(root.find('.//c:geometry/c:mesh/c:source/c:float_array',ns).text,sep=' ').reshape(-1,3);unit=float(root.find('.//c:unit',ns).attrib['meter']);rot=Rotation.from_euler('z',-1.5708)
- inner=rot.apply(np.c_[v[:24:4,:2]*unit*.25,np.zeros(6)])[:,:2];outer=rot.apply(np.c_[v[24:48:4,:2]*unit*.25,np.zeros(6)])[:,:2]
+ # The Collada array interleaves inner/outer faces; classify the two actual
+ # vertex rings by radius, rather than assuming contiguous face order.
+ xy=np.unique(np.round(v[:,:2],5),axis=0);inner_xy=xy[np.linalg.norm(xy,axis=1)<500];outer_xy=xy[np.linalg.norm(xy,axis=1)>500];assert len(inner_xy)==len(outer_xy)==6
+ inner=rot.apply(np.c_[inner_xy*unit*.25,np.zeros(6)])[:,:2];inner=inner[np.argsort(np.arctan2(inner[:,1],inner[:,0]))]
+ outer=rot.apply(np.c_[outer_xy*unit*.25,np.zeros(6)])[:,:2]
  # Order perimeter vertices before polygon membership.
  outer=outer[np.argsort(np.arctan2(outer[:,1],outer[:,0]))];outside=~Polygon(outer).contains_points(centers.reshape(-1,2)).reshape(a.shape)
  checks['outside_enclosing_wall_unknown']=bool(np.all(a[outside]==-1))
