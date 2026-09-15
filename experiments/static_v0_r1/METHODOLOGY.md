@@ -142,3 +142,15 @@ input/configuration, exclusive replay clock, GT evaluation-only and no obsolete
 in coverage, not filled. A failing run remains a failed result even if partial
 trajectory accuracy can be calculated. Preflight refusal before run allocation is
 not a trial. No automatic replacement runs are allowed.
+
+## Clock discovery guard clarification
+
+Query /clock before playback and repeatedly during playback. Count publisher GIDs
+separately from node identity. Zero publishers means no source discovered yet. One
+rosbag2_player endpoint is expected; one unresolved identity warns once per GID and
+continues. Multiple simultaneous endpoints or one clearly named unexpected source
+fails. Name resolution on the same GID is not a second source. Log all snapshots.
+Verify clock advancement after player launch: allow 12 wall seconds for the existing
+3 s playback delay/startup, then fail if advancement stops for over 2 wall seconds
+while the player is active. Existing backward-time checks remain. The guard only
+reads discovery/clock data and never terminates external processes.

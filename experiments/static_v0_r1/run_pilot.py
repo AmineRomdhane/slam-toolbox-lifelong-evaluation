@@ -17,6 +17,7 @@ from lifecycle_msgs.srv import ChangeState
 from slam_toolbox.srv import SerializePoseGraph
 from rosidl_runtime_py.convert import message_to_ordereddict
 from evaluate import evaluate,read_estimate,load_reference,resource_summary,failure_fraction
+from clock_guard import ClockGuard
 WS=Path.home()/'slam_testing';HERE=Path(__file__).resolve().parent
 BAG=WS/'bags/static/world_v0/r1/v0_r1_canonical';EXPECTED='f094c269194313d72ac49d9f7ab181bca5c301763453d1e9d38505072b26a715'
 parser=argparse.ArgumentParser();parser.add_argument('--run-id',default='run_002');args=parser.parse_args()
@@ -62,13 +63,14 @@ pp=writer('inserted_poses.csv',['timestamp','x','y','yaw'])
 resources=writer('resources.csv',['utc','elapsed_wall_seconds','phase','simulation_ns','pid','cpu_seconds','cpu_percent_one_core','rss_bytes'])
 graphcsv=writer('graph_series.csv',['simulation_ns','nodes','edges'])
 clock=None;clocks=[];pending=[];gt_count=0;estimated_count=0;missing=[];inserted=[];scans=[];graphs=[];maps=[];last_grid=None
+clock_guard=ClockGuard()
 phase='startup';slam=player=None;last_resource=None;resource_data=[];last_poll=0.;last_tick=0.;startwall=time.monotonic();clock_authorities=set();authority_conflicts=[];subscriptions=[]
 def onclock(m):
  global clock,phase
  if clock is None:phase='active_playback'
  t=ns(m.clock)
  if clock is not None and t<clock:raise RuntimeError('Simulation time reset')
- clock=t;clocks.append((time.monotonic(),t))
+ clock=t;clocks.append((time.monotonic(),t));clock_guard.clock_received(t,time.monotonic())
 def ongt(m):
  global gt_count
  p,q=m.pose.position,m.pose.orientation;t=ns(m.header.stamp)
@@ -94,6 +96,17 @@ def sample_resource():
  except OSError:return
  now=time.monotonic();pct=0. if last_resource is None else 100*(cpu-last_resource[1])/(now-last_resource[0]);last_resource=(now,cpu)
  r=[utc(),now-startwall,phase,clock,slam.pid,cpu,pct,rss];resources.writerow(r);resource_data.append(r)
+def check_clock_publishers(now):
+ pubs=node.get_publishers_info_by_topic('/clock')
+ endpoints=[{'node':p.node_name,'gid':bytes(p.endpoint_gid).hex()} for p in pubs]
+ clock_authorities.update((p['node'],p['gid']) for p in endpoints)
+ event=clock_guard.observe(endpoints,now-startwall)
+ if event['warning']:
+  node.get_logger().warning(event['warning']);print(event['warning'],flush=True)
+ if event['conflict']:
+  authority_conflicts.append(event);raise RuntimeError(event['conflict'])
+ return event
+
 def tick():
  global pending,estimated_count,last_poll,last_tick
  now=time.monotonic()
@@ -107,10 +120,8 @@ def tick():
    else:keep.append(t)
   pending=keep;last_tick=now
  if now-last_poll>.5:
-  pubs=node.get_publishers_info_by_topic('/clock')
-  if pubs:
-   clock_authorities.update((p.node_name,bytes(p.endpoint_gid).hex()) for p in pubs)
-   if len(pubs)!=1 or pubs[0].node_name!='rosbag2_player':authority_conflicts.append([p.node_name for p in pubs]);raise RuntimeError('Competing clock publisher')
+  check_clock_publishers(now)
+  if player is not None and player.poll() is None:clock_guard.check_advancing(now)
   last_poll=now
  if slam and phase not in ['shutdown','done'] and slam.poll() is not None:raise RuntimeError('SLAM exited unexpectedly')
 def spin_until(pred,timeout=30):
@@ -135,7 +146,7 @@ sl=pl=None
 try:
  spin_wall(2)
  ep={t:[p.node_name for p in node.get_publishers_info_by_topic(t)] for t in ['/clock','/scan','/odom','/tf','/tf_static','/ground_truth/pose','/map','/pose']}
- meta['publishers_before']=ep;assert not any(ep.values()),ep
+ meta['publishers_before']=ep;check_clock_publishers(time.monotonic());assert not any(v for t,v in ep.items() if t!='/clock'),ep
  command=['/opt/ros/jazzy/lib/slam_toolbox/async_slam_toolbox_node','--ros-args','--params-file',str(CONFIG),'-r','__node:=slam_toolbox']
  meta['slam_launch_command']=command;sl=(OUT/'slam_toolbox.log').open('w')
  slam=subprocess.Popen(command,stdout=sl,stderr=subprocess.STDOUT,start_new_session=True);meta['slam_pid']=slam.pid;meta['slam_start_utc']=utc();slam_start=time.monotonic();sample_resource()
@@ -146,6 +157,8 @@ try:
   subprocess.run(['ros2','param','dump','/slam_toolbox'],stdout=f,check=True,timeout=20)
  command=['ros2','bag','play',str(BAG),'--rate','1.0','--clock','100','--delay','3','--topics','/scan','/odom','/tf','/tf_static','/ground_truth/pose']
  meta['playback_command']=command;pl=(OUT/'playback.log').open('w');phase='startup';play_start=time.monotonic();meta['playback_start_utc']=utc()
+ meta['clock_immediately_before_player']=check_clock_publishers(time.monotonic())
+ clock_guard.start_playback(time.monotonic())
  player=subprocess.Popen(command,stdout=pl,stderr=subprocess.STDOUT,start_new_session=True)
  print('PILOT RUNNING: SLAM PID '+str(slam.pid)+'; immutable bag playing once.',flush=True)
  spin_until(lambda:player.poll() is not None,220);meta['playback_process_wall_seconds']=time.monotonic()-play_start;meta['playback_returncode']=player.returncode;assert player.returncode==0
@@ -181,6 +194,7 @@ finally:
  meta['end_utc']=utc();meta['total_wall_seconds']=time.monotonic()-startwall
  meta['bag_sha256_after']=sha(BAG/'v0_r1_canonical_0.mcap');meta['configuration_sha256_after']=sha(CONFIG)
  meta['clock_authorities']=[{'node':n,'gid':g} for n,g in clock_authorities];meta['competing_clock_events']=authority_conflicts
+ meta['clock_guard']={'snapshots':clock_guard.snapshots,'advance_count':clock_guard.advances,'passed':clock_guard.passed()}
  meta['scan_messages_observed']=len(scans);meta['gt_messages']=gt_count;meta['estimated_samples']=estimated_count;meta['missing_estimated_timestamps_ns']=missing+pending
  meta['inserted_pose_publications']=len(inserted);meta['inserted_scan_stamps_ns']=inserted;meta['maps_published']=maps;meta['graph_snapshots']=graphs
  if len(clocks)>1:
@@ -202,7 +216,7 @@ finally:
  stats={'input_scans_in_bag':855,'scan_topic_messages_seen_by_monitor':len(scans),'slam_callback_entry_count':None,'exact_TF_rejection_count':None,'exact_time_motion_skip_count':None,'successful_scan_insertions_from_pose_publications':len(inserted),'first_successful_stamp_ns':inserted[0] if inserted else None,'filter_drop_log_lines':drops,'queue_full_log_count':sum('queue is full' in x for x in drops),'out_the_back_log_count':sum('earlier than all' in x for x in drops),'odom_pose_failure_log_count':logs.count('Failed to compute odom pose'),'laser_device_rejection_log_count':logs.count('Failed to create laser device'),'warn_error_fatal_lines':[l for l in logs.splitlines() if any(s in l for s in ['[WARN]','[ERROR]','[FATAL]'])],'filter_log_limitation':'tf2 MessageFilter logs are throttled at 2500 ms; log counts are not exact drop counters','silent_skip_counts':'Unavailable: shouldProcessScan time/motion/initial-stabilization gates and Karto rejections lack public counters. throttle_scans=1 disables modulo skipping.','loop_closure_events':'Unavailable through current default public logs/interfaces; no inference of zero from absent messages.'}
  dump(OUT/'scan_statistics.json',stats)
  meta['artifacts']={p.name:{'bytes':p.stat().st_size,'sha256':sha(p)} for p in OUT.iterdir() if p.is_file()}
- meta['validation']={'received_all_855_scans_at_monitor':len(scans)==855,'graph_insertions_observed':len(inserted)>0,'map_produced':bool(maps),'grid_saved':(OUT/'map.pgm').exists() and (OUT/'map.yaml').exists(),'graph_serialized':meta.get('serialize_result')==0,'estimated_trajectory_recorded':estimated_count>0,'monitoring_recorded':len(resource_data)>1,'resource_phase_separation':bool(meta['resource_metrics'].get('active_playback')),'trajectory_evaluation_succeeded':meta['trajectory_evaluation'].get('available',False) and meta['trajectory_evaluation'].get('rpe_translation_1m_m',{}).get('samples',0)>0,'laser_range_warning_absent':'maximum laser range setting (20.0 m)' not in logs,'sole_rosbag_clock':len(clock_authorities)==1 and not authority_conflicts,'ground_truth_evaluation_only':not any(t=='/ground_truth/pose' for t,ty in meta.get('slam_subscriptions',[])),'canonical_unchanged':meta['bag_sha256_after']==EXPECTED,'configuration_unchanged':meta['configuration_sha256_after']==manifest['configuration_sha256'],'no_unhandled_errors':not meta.get('failure') and not meta.get('shutdown_errors')}
+ meta['validation']={'received_all_855_scans_at_monitor':len(scans)==855,'graph_insertions_observed':len(inserted)>0,'map_produced':bool(maps),'grid_saved':(OUT/'map.pgm').exists() and (OUT/'map.yaml').exists(),'graph_serialized':meta.get('serialize_result')==0,'estimated_trajectory_recorded':estimated_count>0,'monitoring_recorded':len(resource_data)>1,'resource_phase_separation':bool(meta['resource_metrics'].get('active_playback')),'trajectory_evaluation_succeeded':meta['trajectory_evaluation'].get('available',False) and meta['trajectory_evaluation'].get('rpe_translation_1m_m',{}).get('samples',0)>0,'laser_range_warning_absent':'maximum laser range setting (20.0 m)' not in logs,'sole_rosbag_clock':clock_guard.passed(),'ground_truth_evaluation_only':not any(t=='/ground_truth/pose' for t,ty in meta.get('slam_subscriptions',[])),'canonical_unchanged':meta['bag_sha256_after']==EXPECTED,'configuration_unchanged':meta['configuration_sha256_after']==manifest['configuration_sha256'],'no_unhandled_errors':not meta.get('failure') and not meta.get('shutdown_errors')}
  meta['success']=meta['success'] and all(meta['validation'].values())
  if not meta['success']:
   meta['failure_reason']=meta['failure_reason'] or '; '.join(k for k,v in meta['validation'].items() if not v) or str(meta.get('shutdown_errors','Run failed'))
