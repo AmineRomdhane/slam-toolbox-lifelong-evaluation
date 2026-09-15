@@ -1,0 +1,13 @@
+"""Apply frozen R1 aggregate/map-score calculations to route-specific input manifests."""
+import argparse,json,sys,subprocess,hashlib
+from pathlib import Path
+W=Path('/home/roam5170/slam_testing');p=argparse.ArgumentParser();p.add_argument('step',choices=['aggregate','map_score']);p.add_argument('route',choices=['r2','r3']);a=p.parse_args();route=a.route;ROOT=W/f'results/static/world_v0/{route}';BAG=W/f'bags/static/world_v0/{route}';REF=W/f'reference_maps/static/world_v0/{route}'
+import yaml
+meta=yaml.safe_load((BAG/'metadata.yaml').read_text());commit=json.loads((ROOT/'baseline_run_001_010/execution_manifest.json').read_text())['freeze_commit']
+if a.step=='aggregate':
+ src=W/'results/static/world_v0/r1/baseline_run_004_013/aggregate.py';s=src.read_text().replace('world_v0/r1','world_v0/'+route).replace('baseline_run_004_013','baseline_run_001_010').replace('range(4,14)','range(1,11)').replace('8212a452903503bc34987cd0c06bdf931d957d89',commit).replace('f094c269194313d72ac49d9f7ab181bca5c301763453d1e9d38505072b26a715',meta['canonical_bag_sha256']).replace("'excluded_runs':['run_001','run_002','run_003']","'excluded_runs':[]").replace('STATIC_V0_R1_RUN_004_013','STATIC_V0_'+route.upper()+'_RUN_001_010').replace('Static V0/R1 baseline: runs 004–013','Static V0/'+route.upper()+' baseline: runs 001–010').replace('Validation pilots 001–003 are excluded.','No validation pilots are included.').replace('run_004–run_013','run_001–run_010')
+ out=ROOT/'baseline_run_001_010/aggregate_executed.py';out.write_text(s);exec(compile(s,str(out),'exec'),{'__name__':'__main__','__file__':str(out)})
+else:
+ src=W/'experiments/map_evaluation_v0_r1/score.py';s=src.read_text();m=json.loads((REF/'generation_metadata.json').read_text());grid=json.loads((REF/'grid_metadata.json').read_text());s=s.replace('world_v0/r1','world_v0/'+route).replace('e6bb2022935e23aa08002deddd5a319249e01d6d13b3ae4fcaeb18380d215272',m['reference_map_sha256']).replace("metadata['generator_git_commit'].startswith('09a8aea')","metadata['base_reference_generator_commit'].startswith('09a8aea')").replace('int(domain.sum())==8649',f"int(domain.sum())=={grid['cell_counts']['observed']}").replace('range(4,14)','range(1,11)').replace('baseline_run_004_013','baseline_run_001_010').replace('V0/R1 offline','V0/'+route.upper()+' offline')
+ s=s.replace('Reference omits the first canonical scan, while saved SLAM maps retain their original startup behavior.',f"Reference omits {m['counts']['omitted_no_bracket']} unbracketed scan(s); SLAM retains original startup data.")
+ out=ROOT/'adapter_evidence/map_score_executed.py';out.write_text(s);sys.argv=[str(out),str(ROOT/'map_evaluation_001_010')];exec(compile(s,str(out),'exec'),{'__name__':'__main__','__file__':str(out)})

@@ -1,0 +1,52 @@
+{
+  "routes": {
+    "r2": {
+      "sha256": "1ad26f4c6426e78e39441e1751ac8129e8a1abbb7aceab6d304638845a0c62f3",
+      "validation_summary_sha256": "e2e70936029fa5dfe6dab9abdea44e787df3cc6cfb85d8ed4a8723dfef7fea99",
+      "validation_summary": "/home/roam5170/slam_testing/results/static/world_v0/route_validation_r2_r3/r2/summary.json"
+    },
+    "r3": {
+      "sha256": "a9b55acdd75a300804212ec1dbd076b7765e343c1c042109cfd8881600e5e06c",
+      "validation_summary_sha256": "be9b223e7eeece669678713e6248f856958ab05f4564121c8abec65c091740d3",
+      "validation_summary": "/home/roam5170/slam_testing/results/static/world_v0/route_validation_r2_r3/r3/summary.json"
+    }
+  },
+  "controller_parameters": {
+    "max_linear_velocity": 0.1,
+    "max_angular_velocity": 0.3,
+    "max_linear_acceleration": 0.1,
+    "max_angular_acceleration": 0.3,
+    "position_tolerance": 0.015,
+    "heading_tolerance": 0.015,
+    "waypoint_timeout": 90.0,
+    "max_tracking_error": 0.2,
+    "feedback_timeout": 0.5
+  },
+  "route_validation_runs_each": 3,
+  "methodology_sources": {
+    "experiments/static_v0_r1/METHODOLOGY.md": "6a8387e81c6a0dce982d97de9ac4b3cc3c595ad5b7f695656bb1cd4812adf917",
+    "experiments/static_v0_r1/configuration_manifest.json": "556ff5125f73e7b4e4de01fee53cc0fba51a1de463756df39fb999adb6adb39f",
+    "experiments/static_v0_r1/README.md": "c735a9f858370256fe7723a4ce76103d73d860026ba76342446bbe3506f3cff5",
+    "experiments/static_v0_r1/clock_guard.py": "fbcbcb23cede901ca67e89200b6990837b3ccc5b384c4b3f2b24c87f56aff813",
+    "experiments/static_v0_r1/test_evaluation.py": "005036c70ffbc2e85003facb5ea82c2e0623395acd0b2155c9398fb7eeea217e",
+    "experiments/static_v0_r1/run_pilot.py": "2bb5b1379def6c8743d107a95488e403a96250b8eadd011080a0ee5dc564353c",
+    "experiments/static_v0_r1/test_clock_guard.py": "7a88a10ab91b7f9ec7fdf79ea6a95849665805f85cc1526ab20e5256baa2699b",
+    "experiments/static_v0_r1/evaluate.py": "17e8c73e05aeeb590ea7ff4b809fb4e2321a0c0be931a4ab5a77e72ba397b06b",
+    "experiments/static_v0_r1/mapper_params_online_async.yaml": "7a9930fd1e5fea1e798c6cea1e2fe08827cd59b58d4a5902997204f91ac8f937",
+    "experiments/reference_v0_r1/CMakeLists.txt": "2290d74942f770033a90bae0305b7f34daabecdb25ae50746a350a19208877f3",
+    "experiments/reference_v0_r1/cast_reference.cpp": "0f2958c01553357f8412165911a66d14858c0a55699b6cc2c43c9663447d982a",
+    "experiments/reference_v0_r1/README.md": "de7c11af34637075824a21886a31d2683af4ee624e7fa61d1a2de2d390154e30",
+    "experiments/reference_v0_r1/grid.py": "1ec8c0bb88b4020105aecd62a3c7eafde82bca4bd06aaa6cdb36274047e606a3",
+    "experiments/reference_v0_r1/test_reference.py": "c7a111bac29ec66dcffd603145f456d1a127a5ea33f8258d0214a68b48bc03ad",
+    "experiments/reference_v0_r1/prepare.py": "febb4f136b4d3141c518a57e27d1e2b945a3730a78eb877f3f1ab03f0f4f4b68",
+    "experiments/reference_v0_r1/validate.py": "6c129209ffd89fbaef99522d8e51a8f9d84517a34c1e6d733b4de3e87f690eaf",
+    "experiments/reference_v0_r1/run.py": "9dbe36b4a0a69754ceb1215f63bcda09dfdef2f64294151dc5b3095465b17455",
+    "experiments/reference_v0_r1/METHOD.md": "919d76239688cd6a7415e8a74108592494de17b9a27a45d6eb8396becacb2864",
+    "experiments/map_evaluation_v0_r1/score.py": "ec7a44e22dddb9a8608628f8e6653a3c05345709aa98574e549f12eb7916e099",
+    "experiments/map_evaluation_v0_r1/README.md": "f904ab737830968cfb11ee3e8a63e9d319af4723b8b10c8e60c38fce0243a2df",
+    "experiments/map_evaluation_v0_r1/test_score.py": "c0fe272d69d3d72ce1986e910ac4997d4c4a710dab36edcead2b4600940e4146"
+  },
+  "base_slam_commit": "8212a45",
+  "base_reference_commit": "09a8aea",
+  "base_map_evaluator_commit": "bad6a25"
+}
