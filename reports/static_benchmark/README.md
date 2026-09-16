@@ -2,7 +2,7 @@
 
 **SLAM Toolbox 2.8.5 · ROS 2 Jazzy · TurtleBot3 Burger · Gazebo Sim 8.11.0**
 
-To establish a reproducible static baseline before studying dynamic objects or structural change, this benchmark compares three routes through the same World V0 using **10 valid fresh SLAM processes per route**, each replaying one immutable canonical bag. It measures fixed-input execution repeatability, not ten independently simulated trajectories. No experiments were rerun to produce this report.
+To establish a reproducible static baseline before studying dynamic objects or structural change, this benchmark compares three routes through the same World V0 using **10 valid fresh SLAM processes per route**, each replaying one immutable canonical bag. It measures fixed-input execution repeatability, not ten independently simulated trajectories.
 
 **Cohorts:** R1 `run_004`–`run_013`; R2 `run_001`–`run_010`; R3 `run_001`–`run_009` plus `run_011`. All 30 valid trials passed the frozen run checks. R3 original `run_010` is invalid/excluded following confirmed concurrent external rosbag playback; its outputs and original reports remain intact. Exactly one user-authorized replacement was made. See the [exclusion audit](data/r3_exclusion_audit.json) and [current valid cohort](data/r3_valid_cohort.json).
 
