@@ -3,6 +3,25 @@
 Static World V0 benchmark with SLAM Toolbox 2.8.5 on ROS 2 Jazzy.
 The [static report](../reports/static_benchmark/README.md) is the authoritative human-readable result.
 
+## Canonical acquisition and controller settings
+
+All routes target nominal start/finish `(−2.00, −0.50)` m and final yaw 0 in
+Gazebo world coordinates. Limits remain 0.10 m/s and 0.30 rad/s, with acceleration
+limits 0.10 m/s² and 0.30 rad/s². Final acceptance requires position error ≤15 mm
+and absolute yaw error ≤0.015 rad. Use a fresh World V0 launch and independent
+Gazebo entity ground truth, not odometry or TF for control/evaluation feedback.
+
+Initial settling requires at least 5 simulation seconds, maximum XY GT displacement
+≤5 mm, and no time reset or abnormal jump; preserve another 5 simulation seconds
+stationary after successful route completion. Canonical MCAP uses simulation time
+and does not record `/clock`. Validate topic counts/rates, header timing, GT
+continuity, final pose and replay TF before freezing the bag hash.
+
+Replay only `/scan`, `/odom`, `/tf`, `/tf_static`, `/ground_truth/pose`.
+GT is evaluation-only. Mapper frames are `map`, `odom`, `base_footprint`, and
+scan input is `/scan`, with simulation time enabled. Route-specific input hashes
+and reference scan counts are in [reproducibility](reproducibility.md).
+
 ## Execution
 
 Input MCAP SHA256: f094c269194313d72ac49d9f7ab181bca5c301763453d1e9d38505072b26a715.

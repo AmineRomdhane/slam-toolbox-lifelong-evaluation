@@ -1,7 +1,7 @@
 # Ideal-observed reference maps
 
 The counts in the following protocol describe R1; R2/R3 association counts and
-reference hashes are in the [static report](../reports/static_benchmark/README.md).
+reference hashes are in the [reproducibility record](reproducibility.md#static-benchmark-provenance).
 
 Input is only canonical `/scan` timestamps/geometry and `/ground_truth/pose`.
 The first scan at 11.000 s is explicitly omitted: GT starts at 11.008 s.

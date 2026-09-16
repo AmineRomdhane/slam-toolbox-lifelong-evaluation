@@ -3,8 +3,8 @@
 ## Frozen benchmark identity
 
 The [static report](../reports/static_benchmark/README.md) and its
-[source manifest](../reports/static_benchmark/data/source_manifest.json) contain
-canonical bag/reference hashes, routes, valid cohorts and portable aggregate snapshots.
+[source manifest](../reports/static_benchmark/data/source_manifest.json) identify
+routes, valid cohorts and portable aggregate snapshots; hashes are listed below.
 The current valid R3 cohort is runs 001–009 plus 011; original 010 is invalid/excluded.
 
 Historical commits: SLAM runner/evaluator `8212a45`, reference generator `09a8aea`,
@@ -75,3 +75,31 @@ See [methodology](methodology.md), [metrics](metrics.md), and
 Success fields are execution checks, not an accuracy/coverage acceptance threshold.
 This restructuring neither changes those rules nor reruns any experiment.
 The [migration ledger](layout_migration.md) lists every tracked move/removal.
+
+## Static benchmark provenance
+
+- Frozen SLAM methodology: `8212a45`; R2/R3 adapters/routes and replacement tooling: `d8cf74b`. Reference core: `09a8aea`; map scoring: `bad6a25`. R1 bag provenance commit: `f93de0e`. Full commits and source hashes are retained in snapshots/manifests.
+- SLAM configuration SHA-256: `7a9930fd1e5fea1e798c6cea1e2fe08827cd59b58d4a5902997204f91ac8f937`. rosbag2 `0.26.11`; ROS CLI `0.32.10`.
+- Reference geometry: 0.05 m grid; 360 rays spanning 0–6.28 rad; range 0.12–3.5 m; zero added lidar noise. Full GT orientation composes the physical SDF lidar offset `(−0.032, 0, 0.171)` m. The ROS `base_scan` z offset is 0.182 m: the recorded **11 mm discrepancy** is intentionally preserved.
+- R1 uses 854/855 reference scans (49 exact, 805 interpolated, first scan omitted without a GT bracket); R2 uses 1,052/1,052 (69 exact, 983 interpolated); R3 uses 1,022/1,022 (59 exact, 963 interpolated). No extrapolation. Each reference was generated twice with identical occupancy hashes.
+
+### Canonical MCAP and reference occupancy SHA-256
+
+| Route | Canonical MCAP | Reference `occupancy.npy` |
+|---|---|---|
+| R1 | `f094c269194313d72ac49d9f7ab181bca5c301763453d1e9d38505072b26a715` | `e6bb2022935e23aa08002deddd5a319249e01d6d13b3ae4fcaeb18380d215272` |
+| R2 | `f4fd9096fea5db7c2d4ae90467b176679531ca222e71904e08c39fec4c79ecc8` | `8953777fb7263d6ff8c8ade590684b2666fab2e452f482152ee7ec55c37bb678` |
+| R3 | `28a4014cebf25e945384925424fb4d751383195cdeadd445caeb4f950b28402a` | `b2a2328c1b07fe03e160dbde137372e6d05a82233d915021af73bb33d46b39ba` |
+
+### R3 exclusion evidence
+
+Original R3 `run_010` passed the old artifact checks despite 46.79% coverage.
+A separate player started approximately 1.6 s before the first logged drop and
+overlapped the run. Concurrent playback is confirmed; direct foreign TF receipt
+is strongly supported but was not recorded. The user adjudicated it invalid;
+original success fields and evidence remain unchanged. Exactly one authorized
+replacement (`run_011`) had no other player at preflight and only its intended
+player in ongoing process observations. A sole `/clock` authority does not rule
+out an external `/tf` publisher. See the [exclusion audit](../reports/static_benchmark/data/r3_exclusion_audit.json),
+[replacement audit](../reports/static_benchmark/data/r3_replacement_audit.json) and
+[valid cohort](../reports/static_benchmark/data/r3_valid_cohort.json).

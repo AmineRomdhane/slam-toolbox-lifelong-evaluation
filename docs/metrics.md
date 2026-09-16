@@ -83,3 +83,21 @@ Ten repetitions share one canonical bag per route; intervals describe fixed-inpu
 repeatability, not scene generalization. Coverage accompanies every accuracy result.
 The [report snapshots](../reports/static_benchmark/data/source_manifest.json)
 preserve all individual values and calculation metadata.
+
+## Report visualization and relative repeatability
+
+Distribution panels show all ten valid run values with deterministic horizontal
+spacing, the linear-quantile interquartile range (Q1–Q3), and median. No density
+estimate or histogram is fitted. Units are separate by panel; axes are zoomed.
+Equal values remain ten visible horizontally separated points. Constant diagnostics
+are tabulated instead of plotted.
+
+For strictly positive ratio-scale metrics (ATE RMSE, translational RPE RMSE,
+active CPU mean and active RSS mean), the repeatability figure displays each run's
+signed relative deviation d_i = 100 * (x_i / arithmetic_mean(x) - 1).
+Labels show CV = 100 * sample_SD(x, ddof=1) / arithmetic_mean(x).
+Each route is normalized independently. The median/IQR uses these transformed
+run-level values. CV is a cohort summary, not a per-run measurement. Near-zero,
+constant diagnostic and bounded map-score CVs are not used. These presentation-only
+calculations do not replace or modify frozen aggregates, association, alignment,
+resource windows or experiment outputs.
