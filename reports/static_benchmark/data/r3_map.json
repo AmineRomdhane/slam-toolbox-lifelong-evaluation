@@ -1,0 +1,605 @@
+{
+  "reference_generator_commit": "d8cf74bcbb1413ec7a315092ef8e817d83e81d6e",
+  "reference_occupancy_sha256": "b2a2328c1b07fe03e160dbde137372e6d05a82233d915021af73bb33d46b39ba",
+  "scoring_git_commit": "d8cf74bcbb1413ec7a315092ef8e817d83e81d6e",
+  "included_runs": [
+    "run_001",
+    "run_002",
+    "run_003",
+    "run_004",
+    "run_005",
+    "run_006",
+    "run_007",
+    "run_008",
+    "run_009",
+    "run_011"
+  ],
+  "individual_runs": [
+    {
+      "run_id": "run_001",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.002000296941489134,
+        "tx_m": -1.9968489436891805,
+        "ty_m": -0.4955643852821719,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_002",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.00200522233555536,
+        "tx_m": -1.9968505483666632,
+        "ty_m": -0.49555854869182225,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_003",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.0019834011626746906,
+        "tx_m": -1.9968378163700653,
+        "ty_m": -0.4955810566628128,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 502,
+      "confusion": {
+        "tp": 480,
+        "fp": 99,
+        "fn": 346,
+        "tn": 7719
+      },
+      "occupied_precision": 0.8290155440414507,
+      "occupied_recall": 0.5811138014527845,
+      "occupied_f1": 0.6832740213523132,
+      "occupied_iou": 0.518918918918919,
+      "boundary_distance_mean_m": 0.023887974372137365,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_004",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.0019994944082127922,
+        "tx_m": -1.9968533472211625,
+        "ty_m": -0.49556957094657317,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_005",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.00200522233555536,
+        "tx_m": -1.9968505483666632,
+        "ty_m": -0.49555854869182225,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_006",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.0020017034265803987,
+        "tx_m": -1.9968491304967984,
+        "ty_m": -0.4955575574774599,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_007",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.00200522233555536,
+        "tx_m": -1.9968505483666632,
+        "ty_m": -0.49555854869182225,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_008",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.0019834011626746768,
+        "tx_m": -1.9968378163700653,
+        "ty_m": -0.4955810566628128,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 502,
+      "confusion": {
+        "tp": 480,
+        "fp": 99,
+        "fn": 346,
+        "tn": 7719
+      },
+      "occupied_precision": 0.8290155440414507,
+      "occupied_recall": 0.5811138014527845,
+      "occupied_f1": 0.6832740213523132,
+      "occupied_iou": 0.518918918918919,
+      "boundary_distance_mean_m": 0.023887974372137365,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_009",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.00199952654952735,
+        "tx_m": -1.9968532123940903,
+        "ty_m": -0.49556953903532003,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 501,
+      "confusion": {
+        "tp": 481,
+        "fp": 98,
+        "fn": 345,
+        "tn": 7720
+      },
+      "occupied_precision": 0.8307426597582038,
+      "occupied_recall": 0.5823244552058111,
+      "occupied_f1": 0.6846975088967971,
+      "occupied_iou": 0.5205627705627706,
+      "boundary_distance_mean_m": 0.02375755862691724,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    },
+    {
+      "run_id": "run_011",
+      "status": "ok",
+      "original_slam_success": true,
+      "alignment": {
+        "theta_rad": -0.0019834011626746906,
+        "tx_m": -1.9968378163700653,
+        "ty_m": -0.4955810566628128,
+        "scale": 1.0,
+        "direction": "estimated map coordinates -> gazebo_world",
+        "fit": "Least-squares XY over all exactly associated samples, equal sample weight; yaw excluded from fitting; no reflection, robust trimming or scale correction"
+      },
+      "reference_observed_cells": 8644,
+      "slam_known_in_domain": 7985,
+      "slam_unknown_in_domain": 659,
+      "outside_slam_extent_in_domain": 26,
+      "reference_boundary_cells": 466,
+      "slam_boundary_cells": 502,
+      "confusion": {
+        "tp": 480,
+        "fp": 99,
+        "fn": 346,
+        "tn": 7719
+      },
+      "occupied_precision": 0.8290155440414507,
+      "occupied_recall": 0.5811138014527845,
+      "occupied_f1": 0.6832740213523132,
+      "occupied_iou": 0.518918918918919,
+      "boundary_distance_mean_m": 0.023887974372137365,
+      "boundary_distance_median_m": 0.0,
+      "boundary_distance_p95_m": 0.05000000000000071
+    }
+  ],
+  "metrics": {
+    "occupied_precision": {
+      "individual_values": [
+        0.8307426597582038,
+        0.8307426597582038,
+        0.8290155440414507,
+        0.8307426597582038,
+        0.8307426597582038,
+        0.8307426597582038,
+        0.8307426597582038,
+        0.8290155440414507,
+        0.8307426597582038,
+        0.8290155440414507
+      ],
+      "n": 10,
+      "mean": 0.8302245250431779,
+      "sd": 0.0008342761511911406,
+      "median": 0.8307426597582038,
+      "q1": 0.829447322970639,
+      "q3": 0.8307426597582038,
+      "iqr": 0.0012953367875648825,
+      "min": 0.8290155440414507,
+      "max": 0.8307426597582038,
+      "bootstrap_mean_95_ci": [
+        0.8297063903281521,
+        0.8307426597582038
+      ]
+    },
+    "occupied_recall": {
+      "individual_values": [
+        0.5823244552058111,
+        0.5823244552058111,
+        0.5811138014527845,
+        0.5823244552058111,
+        0.5823244552058111,
+        0.5823244552058111,
+        0.5823244552058111,
+        0.5811138014527845,
+        0.5823244552058111,
+        0.5811138014527845
+      ],
+      "n": 10,
+      "mean": 0.5819612590799031,
+      "sd": 0.0005848013214765774,
+      "median": 0.5823244552058111,
+      "q1": 0.5814164648910412,
+      "q3": 0.5823244552058111,
+      "iqr": 0.0009079903147699575,
+      "min": 0.5811138014527845,
+      "max": 0.5823244552058111,
+      "bootstrap_mean_95_ci": [
+        0.5815980629539951,
+        0.582324455205811
+      ]
+    },
+    "occupied_f1": {
+      "individual_values": [
+        0.6846975088967971,
+        0.6846975088967971,
+        0.6832740213523132,
+        0.6846975088967971,
+        0.6846975088967971,
+        0.6846975088967971,
+        0.6846975088967971,
+        0.6832740213523132,
+        0.6846975088967971,
+        0.6832740213523132
+      ],
+      "n": 10,
+      "mean": 0.6842704626334519,
+      "sd": 0.0006876098100208382,
+      "median": 0.6846975088967971,
+      "q1": 0.6836298932384341,
+      "q3": 0.6846975088967971,
+      "iqr": 0.001067615658362997,
+      "min": 0.6832740213523132,
+      "max": 0.6846975088967971,
+      "bootstrap_mean_95_ci": [
+        0.6838434163701067,
+        0.6846975088967973
+      ]
+    },
+    "occupied_iou": {
+      "individual_values": [
+        0.5205627705627706,
+        0.5205627705627706,
+        0.518918918918919,
+        0.5205627705627706,
+        0.5205627705627706,
+        0.5205627705627706,
+        0.5205627705627706,
+        0.518918918918919,
+        0.5205627705627706,
+        0.518918918918919
+      ],
+      "n": 10,
+      "mean": 0.5200696150696151,
+      "sd": 0.000794055782863218,
+      "median": 0.5205627705627706,
+      "q1": 0.5193298818298818,
+      "q3": 0.5205627705627706,
+      "iqr": 0.0012328887328887372,
+      "min": 0.518918918918919,
+      "max": 0.5205627705627706,
+      "bootstrap_mean_95_ci": [
+        0.5195764595764596,
+        0.5205627705627707
+      ]
+    },
+    "boundary_distance_mean_m": {
+      "individual_values": [
+        0.02375755862691724,
+        0.02375755862691724,
+        0.023887974372137365,
+        0.02375755862691724,
+        0.02375755862691724,
+        0.02375755862691724,
+        0.02375755862691724,
+        0.023887974372137365,
+        0.02375755862691724,
+        0.023887974372137365
+      ],
+      "n": 10,
+      "mean": 0.023796683350483277,
+      "sd": 6.299678992066382e-05,
+      "median": 0.02375755862691724,
+      "q1": 0.02375755862691724,
+      "q3": 0.023855370435832333,
+      "iqr": 9.781180891509436e-05,
+      "min": 0.02375755862691724,
+      "max": 0.023887974372137365,
+      "bootstrap_mean_95_ci": [
+        0.023757558626917242,
+        0.023835808074049315
+      ]
+    },
+    "boundary_distance_median_m": {
+      "individual_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "n": 10,
+      "mean": 0.0,
+      "sd": 0.0,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "bootstrap_mean_95_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "boundary_distance_p95_m": {
+      "individual_values": [
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071,
+        0.05000000000000071
+      ],
+      "n": 10,
+      "mean": 0.05000000000000071,
+      "sd": 0.0,
+      "median": 0.05000000000000071,
+      "q1": 0.05000000000000071,
+      "q3": 0.05000000000000071,
+      "iqr": 0.0,
+      "min": 0.05000000000000071,
+      "max": 0.05000000000000071,
+      "bootstrap_mean_95_ci": [
+        0.05000000000000071,
+        0.05000000000000071
+      ]
+    }
+  },
+  "input_sha256": {
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_001/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_001/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_001/run_metadata.json": "b0b9ed9486a7ddce26b912534098f282e1716d87cc44582e8c9cbbd793632e4a",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_002/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_002/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_002/run_metadata.json": "44c67c6c038b9a5e555ee16d410ae19fbcd677a985b88bf18899001270d263cb",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_003/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_003/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_003/run_metadata.json": "74111ff815a4822d1dd95cb355d73a92dea5b689b4dcd1343da51c2c30d5775d",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_004/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_004/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_004/run_metadata.json": "b34ccb53b3201c4e986edf66f390b8ffa993249a217049505afb2dffec942f77",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_005/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_005/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_005/run_metadata.json": "b5b039490bf261a3b4003b3ba9853b73f0baf367fba15997877093af05df29bd",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_006/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_006/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_006/run_metadata.json": "0fffbac7501e307511adb60e3c940134023c9f692bf6c961447ed30a2241035d",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_007/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_007/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_007/run_metadata.json": "6aa62d3784351fb989aff70286e49ad038f38b1db1ac580ca240099054d00e9a",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_008/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_008/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_008/run_metadata.json": "54b72259bec204ffbff2c821be289f3db07a58d399b6c39603e964b3a2c1d337",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_009/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_009/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_009/run_metadata.json": "b9fc560934cce6e9b960f634648511d064852049d9859b8b06a40f14a8db53f2",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_011/map.pgm": "1e10c919a17ff7e88245c671f0c1ef2659fe472e4029edc92bf6a4bc9d14a9a0",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_011/map.yaml": "90aa3a351f0fc91ad90de87f77e33235aa77a4038243db8e7a867cf735be3326",
+    "/home/roam5170/slam_testing/results/static/world_v0/r3/run_011/run_metadata.json": "f576e04a0892d6eacc862c76a348d86cda6be0c8c46ef8c23a883a6e62b3614b",
+    "/home/roam5170/slam_testing/reference_maps/static/world_v0/r3/occupancy.npy": "b2a2328c1b07fe03e160dbde137372e6d05a82233d915021af73bb33d46b39ba",
+    "/home/roam5170/slam_testing/reference_maps/static/world_v0/r3/ideal_observed_map.yaml": "0162f3754d3ff215f54cb5f947128825f2ce5deed2a5e004583fa9846c92d6c1",
+    "/home/roam5170/slam_testing/reference_maps/static/world_v0/r3/ideal_observed_map.pgm": "7bfb25fed9a46f4716beabc03d5ad09aaa7c9072827e3295a1c274cdd5d2a5e2"
+  },
+  "method": {
+    "alignment": "Reuse each run_metadata trajectory_evaluation alignment verbatim; invert to sample source map. No fitted map alignment.",
+    "sampling": "Reference cell centers inverse-projected into SLAM map and YAML origin yaw; containing source cell (floor), no smoothing or tolerance dilation.",
+    "unknown": "Reference unknown excluded. Source unknown/out-of-map counts as not occupied: FN for occupied truth, TN for free truth. Known coverage reported separately.",
+    "boundary": "4-neighbor inner occupied boundary with at least one reference-observed nonoccupied neighbor. Outside-domain neighbors ignored. On the SLAM mask, unknown inside domain is nonoccupied.",
+    "distance": "Euclidean distances between boundary-cell centers on reference grid, meters. Concatenate both directed nearest-neighbor arrays; mean/median/p95 over pooled points. Point-count weighted, not equal-direction weighting.",
+    "statistics": "One value per run. Sample SD ddof=1; NumPy linear quantiles; IQR=Q3-Q1. 20,000 bootstrap resamples of runs; percentile95 CI for mean; seeds20260915+metric_index. Null metrics omitted explicitly, available n reported.",
+    "ambiguities": [
+      "Grid-cell-center sampling is phase-dependent at 5 cm; not overlap-area scoring.",
+      "Boundary metrics use cell centers and are quantized; excluded-domain neighbors never create artificial crop boundaries.",
+      "Unknown source cells are not silently removed from scoring.",
+      "Symmetric distance uses pooled boundary points; an equal-direction Chamfer mean is a different convention.",
+      "Reference omits 0 unbracketed scan(s); SLAM retains original startup data."
+    ]
+  },
+  "cohort_adjudication": {
+    "cohort_status": "CURRENT_VALID_R3_BASELINE",
+    "included_runs": [
+      "run_001",
+      "run_002",
+      "run_003",
+      "run_004",
+      "run_005",
+      "run_006",
+      "run_007",
+      "run_008",
+      "run_009",
+      "run_011"
+    ],
+    "excluded_runs": [
+      "run_010"
+    ],
+    "total_recorded_attempts": 11,
+    "valid_trials": 10,
+    "invalid_trials": 1,
+    "replacement_policy": "Exactly one user-authorized replacement; no automatic retries.",
+    "invalidity_reason": "Confirmed concurrent external rosbag playback; user adjudicated original run_010 invalid. Direct TF receipt was not captured, as documented in forensic evidence.",
+    "original_outputs": "Preserved byte-for-byte, including original run success fields and superseded aggregate reports.",
+    "methodology_changes": null
+  }
+}

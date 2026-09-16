@@ -1,0 +1,48 @@
+{
+  "status": "PASSED",
+  "base_commit": "d8cf74bcbb1413ec7a315092ef8e817d83e81d6e",
+  "tracked_moves": 32,
+  "tracked_deletions": 19,
+  "offline_unittest": {
+    "tests": 46,
+    "failures": 0
+  },
+  "ros_colcon_build": {
+    "packages": [
+      "slam_eval_ground_truth",
+      "slam_eval_route_controller"
+    ],
+    "build_directory": "/tmp/slam_layout_check/build",
+    "passed": true
+  },
+  "ros_ctest": {
+    "entries": 2,
+    "failures": 0,
+    "controller_cases": 13
+  },
+  "reference_caster_compile": true,
+  "protected_raw_files_unchanged": 1773,
+  "all_route_config_bytes_preserved": true,
+  "installed_routes_match_authoritative_sources": true,
+  "six_report_aggregate_snapshots_match_frozen_results": true,
+  "map_metric_function_AST_unchanged": true,
+  "numerical_core_byte_checks_passed": true,
+  "markdown_files_checked": 10,
+  "markdown_links_checked": 49,
+  "experiments_executed": 0,
+  "known_behavior_changes": [
+    "Completed historical orchestration/probe entry points retired; frozen Git history retained.",
+    "Map source-integrity guard uses relocated source manifest.",
+    "Controller route install source moves to benchmark/routes; installed API unchanged.",
+    "Controller test entry point guarded for unittest discovery; assertions unchanged.",
+    "Workspace paths derive from tool location; runner provenance includes relocated config/manifest."
+  ],
+  "initial_verification_issues_resolved": [
+    "Unconditional unittest.main prevented test discovery; guarded.",
+    "Empty old route directory removed.",
+    "colcon test-result default log path blocked by sandbox; rerun with explicit /tmp log path passed."
+  ],
+  "tracked_authoritative_yaml_count": 4,
+  "raw_artifacts_tracked": false,
+  "whitespace_check": "Passed for source/docs; preserved Matplotlib SVGs checked with blank-at-eol disabled, without changing asset bytes."
+}

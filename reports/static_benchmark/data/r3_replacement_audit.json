@@ -1,0 +1,24 @@
+{
+  "original_artifacts_unchanged": true,
+  "protected_files": 373,
+  "replacement": "run_011",
+  "replacement_success": true,
+  "included_runs": [
+    "run_001",
+    "run_002",
+    "run_003",
+    "run_004",
+    "run_005",
+    "run_006",
+    "run_007",
+    "run_008",
+    "run_009",
+    "run_011"
+  ],
+  "excluded_runs": [
+    "run_010"
+  ],
+  "aggregate": "/home/roam5170/slam_testing/results/static/world_v0/r3/baseline_valid_001_009_011",
+  "map_scores": "/home/roam5170/slam_testing/results/static/world_v0/r3/map_evaluation_valid_001_009_011",
+  "players_after": []
+}

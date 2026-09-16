@@ -18,3 +18,6 @@ __pycache__/
 # Temporary/log files
 *.log
 *.tmp
+
+# Frozen generated reference artifacts remain local, outside the published tree
+/reference_maps/

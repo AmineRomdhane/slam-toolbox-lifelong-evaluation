@@ -1,0 +1,29 @@
+{
+  "invalid_run": "run_010",
+  "valid": false,
+  "reason": "Confirmed concurrent external rosbag playback; excluded by explicit user adjudication.",
+  "causal_certainty": "Concurrent playback confirmed by separate ROS player log; direct external TF receipt strongly supported, not captured by original monitor.",
+  "original_success_flag_preserved": true,
+  "replacement": "run_011",
+  "included_runs": [
+    "run_001",
+    "run_002",
+    "run_003",
+    "run_004",
+    "run_005",
+    "run_006",
+    "run_007",
+    "run_008",
+    "run_009",
+    "run_011"
+  ],
+  "excluded_runs": [
+    "run_010"
+  ],
+  "original_aggregates": "Preserved unchanged; superseded for valid-cohort use by baseline_valid_001_009_011 and map_evaluation_valid_001_009_011",
+  "forensic_timeline_utc": {
+    "external_start": "2026-09-15T21:54:40.884678177Z",
+    "first_drop": "2026-09-15T21:54:42.471418191Z",
+    "external_stop": "2026-09-15T21:58:47.442921024Z"
+  }
+}

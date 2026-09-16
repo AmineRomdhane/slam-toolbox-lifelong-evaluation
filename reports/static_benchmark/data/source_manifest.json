@@ -1,0 +1,87 @@
+{
+  "sources_sha256": {
+    "results/static/world_v0/r1/baseline_run_004_013/aggregate_report.json": "ac68ae525493db78f05fad81f6e4f55949d8f9459d5b20621db05bb929f018ac",
+    "results/static/world_v0/r1/map_evaluation_004_013/report.json": "eb5cd56783c82299d56da16e378c77bfc17a6a6aadd067efa3fe799a32c6ce0d",
+    "bags/static/world_v0/r1/metadata.yaml": "8338ee0dfed120ce8264540b68e1fffab2478d15f3e7d7fabbe26c00822f14c2",
+    "reference_maps/static/world_v0/r1/generation_metadata.json": "7424395314051e469e35c239cd2e984bd20a9f1d8ad60f0893c76f3e1486a40d",
+    "src/slam_eval_route_controller/routes/r1.yaml": "9e9f8948fcc99fe6b5ec18c90bc0acf3b57959c412b20c9eb3c02e6af7246c78",
+    "results/static/world_v0/r2/baseline_run_001_010/aggregate_report.json": "2e9796004e3a8a3ac79cc1d0eece2cafd3ee2ca0be128fb329fa5078bf9dd96b",
+    "results/static/world_v0/r2/map_evaluation_001_010/report.json": "c9ebe30a52df10756bf1eff1c6aeb94e57d9d3ae5afb63fe1896496baa58d58e",
+    "bags/static/world_v0/r2/metadata.yaml": "d1977f0f4d81140f66cadea281db2752d59a63718ada5d1af0240b1847edf7c1",
+    "reference_maps/static/world_v0/r2/generation_metadata.json": "47bfac39a1761b6bdaf42218416e780c8ca3ef4b1427019eb54834cd0ddd6ed2",
+    "src/slam_eval_route_controller/routes/r2.yaml": "1ad26f4c6426e78e39441e1751ac8129e8a1abbb7aceab6d304638845a0c62f3",
+    "results/static/world_v0/r3/baseline_valid_001_009_011/aggregate_report.json": "a93661d51562bf9583e24e032a88196bc7b4f0e21e1d48e31ddbab9917a3eb18",
+    "results/static/world_v0/r3/map_evaluation_valid_001_009_011/report.json": "453cda0ab4dbb43c89c67b3aa4a9da0e79f7a96264efe0a4bae8c17b9cfd7a22",
+    "bags/static/world_v0/r3/metadata.yaml": "7642c1ef115cf6986523aef4801f1a01fee7ad98be147378a644e3dc2cd8e939",
+    "reference_maps/static/world_v0/r3/generation_metadata.json": "b2223bf517445b0fc118eb3e13844163993f3e0df08a58253b147b4338629401",
+    "src/slam_eval_route_controller/routes/r3.yaml": "a9b55acdd75a300804212ec1dbd076b7765e343c1c042109cfd8881600e5e06c",
+    "results/static/world_v0/r3/current_valid_cohort.json": "007e3de2943646da38b9d297d0767c16ca21c2245ae762a3453a05e3ff9c53e9",
+    "results/static/world_v0/r3/replacement_run_010_audit/trial_validity.json": "40e5720ff30063d9e5501d43cdfe9b8305510054fb53aacdc1c08d629c180b04",
+    "results/static/world_v0/r3/replacement_run_010_audit/completion.json": "2264c4e9735b583165df0b608329fb7447684d43bf0ac9db0abcef51e8f7d851",
+    "experiments/static_v0_r1/METHODOLOGY.md": "6a8387e81c6a0dce982d97de9ac4b3cc3c595ad5b7f695656bb1cd4812adf917",
+    "experiments/static_v0_r1/mapper_params_online_async.yaml": "7a9930fd1e5fea1e798c6cea1e2fe08827cd59b58d4a5902997204f91ac8f937",
+    "experiments/static_v0_r2_r3/freeze_manifest.json": "493e983473f78b7f1072dc70715c463d80f662c63aa403c31707ac668980aee3"
+  },
+  "cohorts": {
+    "r1": [
+      "run_004",
+      "run_005",
+      "run_006",
+      "run_007",
+      "run_008",
+      "run_009",
+      "run_010",
+      "run_011",
+      "run_012",
+      "run_013"
+    ],
+    "r2": [
+      "run_001",
+      "run_002",
+      "run_003",
+      "run_004",
+      "run_005",
+      "run_006",
+      "run_007",
+      "run_008",
+      "run_009",
+      "run_010"
+    ],
+    "r3": [
+      "run_001",
+      "run_002",
+      "run_003",
+      "run_004",
+      "run_005",
+      "run_006",
+      "run_007",
+      "run_008",
+      "run_009",
+      "run_011"
+    ]
+  },
+  "excluded_original_r3": [
+    "run_010"
+  ],
+  "turtlebot3_source_commits": {
+    "turtlebot3": "0c0be84e3f5c3194fb2adea8426a58a96060eab5",
+    "turtlebot3_msgs": "9209e01b4708cf3ca5610b01dfc9586d3c7889d8",
+    "turtlebot3_simulations": "45633014a14e8f438495b532a723e4ad45cbbd31"
+  },
+  "route_sha256": {
+    "r1": "9e9f8948fcc99fe6b5ec18c90bc0acf3b57959c412b20c9eb3c02e6af7246c78",
+    "r2": "1ad26f4c6426e78e39441e1751ac8129e8a1abbb7aceab6d304638845a0c62f3",
+    "r3": "a9b55acdd75a300804212ec1dbd076b7765e343c1c042109cfd8881600e5e06c"
+  },
+  "canonical_bag_sha256": {
+    "r1": "f094c269194313d72ac49d9f7ab181bca5c301763453d1e9d38505072b26a715",
+    "r2": "f4fd9096fea5db7c2d4ae90467b176679531ca222e71904e08c39fec4c79ecc8",
+    "r3": "28a4014cebf25e945384925424fb4d751383195cdeadd445caeb4f950b28402a"
+  },
+  "reference_occupancy_sha256": {
+    "r1": "e6bb2022935e23aa08002deddd5a319249e01d6d13b3ae4fcaeb18380d215272",
+    "r2": "8953777fb7263d6ff8c8ade590684b2666fab2e452f482152ee7ec55c37bb678",
+    "r3": "b2a2328c1b07fe03e160dbde137372e6d05a82233d915021af73bb33d46b39ba"
+  },
+  "generation": "Read-only frozen report ingestion; plots show existing run-level values; no experiment execution or metric re-evaluation."
+}

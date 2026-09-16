@@ -1,0 +1,1950 @@
+{
+  "baseline_id": "STATIC_V0_R3_VALID_001_009_011",
+  "included_runs": [
+    "run_001",
+    "run_002",
+    "run_003",
+    "run_004",
+    "run_005",
+    "run_006",
+    "run_007",
+    "run_008",
+    "run_009",
+    "run_011"
+  ],
+  "excluded_runs": [
+    "run_010"
+  ],
+  "frozen_tooling_commit": "d8cf74bcbb1413ec7a315092ef8e817d83e81d6e",
+  "frozen_slam_configuration_sha256": "7a9930fd1e5fea1e798c6cea1e2fe08827cd59b58d4a5902997204f91ac8f937",
+  "frozen_canonical_bag_sha256": "28a4014cebf25e945384925424fb4d751383195cdeadd445caeb4f950b28402a",
+  "attempted_runs": 10,
+  "successes": 10,
+  "failures": 0,
+  "success_rate": 1.0,
+  "success_rate_wilson_95_ci": [
+    0.7224672001371107,
+    0.9999999999999999
+  ],
+  "individual_runs": [
+    {
+      "run_id": "run_001",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010923162597704348,
+      "ate_translation_median": 0.010591942852477007,
+      "ate_translation_p95": 0.017475732858141527,
+      "ape_yaw_rmse": 0.007576376719459859,
+      "ape_yaw_median": 0.005691158417708841,
+      "rpe_1m_translation_rmse": 0.01652654958786563,
+      "rpe_1m_rotation_rmse": 0.007066567425003824,
+      "active_cpu_mean": 4.889422961430114,
+      "active_cpu_peak": 15.913197581298762,
+      "active_rss_mean": 46.694253976074926,
+      "active_rss_peak": 46.94921875,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.000002433445628,
+      "active_playback_wall_duration": 204.2893425319926,
+      "slam_process_wall_duration": 220.42353657097556,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_002",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010913360549656238,
+      "ate_translation_median": 0.010576432056594838,
+      "ate_translation_p95": 0.01745670221741551,
+      "ape_yaw_rmse": 0.007572820314010859,
+      "ape_yaw_median": 0.005696082898535515,
+      "rpe_1m_translation_rmse": 0.01650082015248675,
+      "rpe_1m_rotation_rmse": 0.007064993939460586,
+      "active_cpu_mean": 5.253433110547014,
+      "active_cpu_peak": 15.940768472686129,
+      "active_rss_mean": 46.07883191292635,
+      "active_rss_peak": 46.234375,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.0000007318770336,
+      "active_playback_wall_duration": 204.2897837019991,
+      "slam_process_wall_duration": 220.77793232299155,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_003",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010891501719535268,
+      "ate_translation_median": 0.01051265626557348,
+      "ate_translation_p95": 0.017444669275086474,
+      "ape_yaw_rmse": 0.007553380748668301,
+      "ape_yaw_median": 0.00567426244084368,
+      "rpe_1m_translation_rmse": 0.016443937187669337,
+      "rpe_1m_rotation_rmse": 0.007055026150232022,
+      "active_cpu_mean": 5.794537741180891,
+      "active_cpu_peak": 15.703038612123086,
+      "active_rss_mean": 46.2369580670328,
+      "active_rss_peak": 46.671875,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.0000018331036467,
+      "active_playback_wall_duration": 204.28961356496438,
+      "slam_process_wall_duration": 220.68813130102353,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_004",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010910969166745613,
+      "ate_translation_median": 0.010577572719398872,
+      "ate_translation_p95": 0.017459509805281628,
+      "ape_yaw_rmse": 0.007567216296052218,
+      "ape_yaw_median": 0.005690354971192856,
+      "rpe_1m_translation_rmse": 0.016499767485594407,
+      "rpe_1m_rotation_rmse": 0.007063246256629206,
+      "active_cpu_mean": 4.76316333928635,
+      "active_cpu_peak": 13.998349735183782,
+      "active_rss_mean": 46.750240802765134,
+      "active_rss_peak": 47.0859375,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 0.9999985911315172,
+      "active_playback_wall_duration": 204.29018340900075,
+      "slam_process_wall_duration": 220.6921201570076,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_005",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010913360549656238,
+      "ate_translation_median": 0.010576432056594838,
+      "ate_translation_p95": 0.01745670221741551,
+      "ape_yaw_rmse": 0.00757282031401086,
+      "ape_yaw_median": 0.005696082898535515,
+      "rpe_1m_translation_rmse": 0.01650082015248675,
+      "rpe_1m_rotation_rmse": 0.007064993939460586,
+      "active_cpu_mean": 4.94100280152419,
+      "active_cpu_peak": 15.99559311908986,
+      "active_rss_mean": 46.58770234843897,
+      "active_rss_peak": 46.97265625,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.0000015944615215,
+      "active_playback_wall_duration": 204.28965419600718,
+      "slam_process_wall_duration": 220.76433462504065,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_006",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.01092122376232813,
+      "ate_translation_median": 0.010576261830714315,
+      "ate_translation_p95": 0.017475135591063,
+      "ape_yaw_rmse": 0.007573645156435866,
+      "ape_yaw_median": 0.0056925649028003455,
+      "rpe_1m_translation_rmse": 0.016514160842491764,
+      "rpe_1m_rotation_rmse": 0.007067943616025705,
+      "active_cpu_mean": 5.194838767827806,
+      "active_cpu_peak": 13.99627668342923,
+      "active_rss_mean": 47.36695382614797,
+      "active_rss_peak": 47.8125,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 0.9999995151154154,
+      "active_playback_wall_duration": 204.28991748503176,
+      "slam_process_wall_duration": 220.42165102198487,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_007",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010913360549656238,
+      "ate_translation_median": 0.010576432056594838,
+      "ate_translation_p95": 0.01745670221741551,
+      "ape_yaw_rmse": 0.007572820314010859,
+      "ape_yaw_median": 0.005696082898535515,
+      "rpe_1m_translation_rmse": 0.01650082015248675,
+      "rpe_1m_rotation_rmse": 0.007064993939460586,
+      "active_cpu_mean": 5.544586922741725,
+      "active_cpu_peak": 13.999646451638089,
+      "active_rss_mean": 46.83961470762415,
+      "active_rss_peak": 47.15234375,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.0000018306804017,
+      "active_playback_wall_duration": 204.28960871201707,
+      "slam_process_wall_duration": 220.6805095410091,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_008",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010891501719535271,
+      "ate_translation_median": 0.01051265626557348,
+      "ate_translation_p95": 0.01744466927508647,
+      "ape_yaw_rmse": 0.007553380748668358,
+      "ape_yaw_median": 0.00567426244084368,
+      "rpe_1m_translation_rmse": 0.016443937187669386,
+      "rpe_1m_rotation_rmse": 0.007055026150232105,
+      "active_cpu_mean": 5.351994055936628,
+      "active_cpu_peak": 13.99898958141712,
+      "active_rss_mean": 46.018521808464484,
+      "active_rss_peak": 46.30859375,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 0.9999995179595661,
+      "active_playback_wall_duration": 204.28996320802253,
+      "slam_process_wall_duration": 220.41490263299784,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_009",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010911156488636874,
+      "ate_translation_median": 0.010577486457123903,
+      "ate_translation_p95": 0.01745937373061777,
+      "ape_yaw_rmse": 0.007567723916707454,
+      "ape_yaw_median": 0.005690387112507356,
+      "rpe_1m_translation_rmse": 0.01650005732417776,
+      "rpe_1m_rotation_rmse": 0.007061894650588658,
+      "active_cpu_mean": 5.304082425598396,
+      "active_cpu_peak": 13.99912508387364,
+      "active_rss_mean": 47.12905279724405,
+      "active_rss_peak": 47.3984375,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.000002286593347,
+      "active_playback_wall_duration": 204.28949923499022,
+      "slam_process_wall_duration": 220.77249189198483,
+      "bag_simulation_duration": 204.313
+    },
+    {
+      "run_id": "run_011",
+      "success": true,
+      "failure_reason": null,
+      "failure_sim_time": null,
+      "failure_route_fraction": null,
+      "trajectory_coverage": 0.998917568692756,
+      "ate_translation_rmse": 0.010891501719535268,
+      "ate_translation_median": 0.01051265626557348,
+      "ate_translation_p95": 0.017444669275086474,
+      "ape_yaw_rmse": 0.007553380748668301,
+      "ape_yaw_median": 0.00567426244084368,
+      "rpe_1m_translation_rmse": 0.016443937187669337,
+      "rpe_1m_rotation_rmse": 0.007055026150232023,
+      "active_cpu_mean": 5.026085377459222,
+      "active_cpu_peak": 14.000099119500698,
+      "active_rss_mean": 47.10302396204524,
+      "active_rss_peak": 47.50390625,
+      "graph_nodes": 10,
+      "graph_edges": 13,
+      "observed_scan_topic_messages": 1022,
+      "tf_rejection_log_lines": 0,
+      "queue_full_warning_log_lines": 0,
+      "graph_insertions": 10,
+      "playback_real_time_factor": 1.0000008794900828,
+      "active_playback_wall_duration": 204.28990749805234,
+      "slam_process_wall_duration": 220.43664713809267,
+      "bag_simulation_duration": 204.313
+    }
+  ],
+  "metrics": {
+    "trajectory_coverage": {
+      "available_n": 10,
+      "mean": 0.998917568692756,
+      "sample_std": 0.0,
+      "median": 0.998917568692756,
+      "q1": 0.998917568692756,
+      "q3": 0.998917568692756,
+      "iqr": 0.0,
+      "min": 0.998917568692756,
+      "max": 0.998917568692756,
+      "bootstrap_mean_95_ci": [
+        0.998917568692756,
+        0.998917568692756
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "fraction",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.998917568692756
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.998917568692756
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "ate_translation_rmse": {
+      "available_n": 10,
+      "mean": 0.010908109882298948,
+      "sample_std": 1.213908811542407e-05,
+      "median": 0.010912258519146557,
+      "q1": 0.010896368581337856,
+      "q3": 0.010913360549656238,
+      "iqr": 1.6991968318381262e-05,
+      "min": 0.010891501719535268,
+      "max": 0.010923162597704348,
+      "bootstrap_mean_95_ci": [
+        0.010900765911995468,
+        0.0109149066696263
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "m",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.010923162597704348
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.010913360549656238
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.010891501719535268
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.010910969166745613
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.010913360549656238
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.01092122376232813
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.010913360549656238
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.010891501719535271
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.010911156488636874
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.010891501719535268
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "ate_translation_median": {
+      "available_n": 10,
+      "mean": 0.010559052882621905,
+      "sample_std": 3.236033978540541e-05,
+      "median": 0.010576432056594838,
+      "q1": 0.01052855765685869,
+      "q3": 0.010577222856991638,
+      "iqr": 4.866520013294823e-05,
+      "min": 0.01051265626557348,
+      "max": 0.010591942852477007,
+      "bootstrap_mean_95_ci": [
+        0.010538369065727282,
+        0.010576828397857856
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "m",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.010591942852477007
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.010576432056594838
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.01051265626557348
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.010577572719398872
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.010576432056594838
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.010576261830714315
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.010576432056594838
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.01051265626557348
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.010577486457123903
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.01051265626557348
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "ate_translation_p95": {
+      "available_n": 10,
+      "mean": 0.017457386646260988,
+      "sample_std": 1.128747958149081e-05,
+      "median": 0.01745670221741551,
+      "q1": 0.01744767751066873,
+      "q3": 0.017459475786615664,
+      "iqr": 1.1798275946932335e-05,
+      "min": 0.01744466927508647,
+      "max": 0.017475732858141527,
+      "bootstrap_mean_95_ci": [
+        0.017450966505037604,
+        0.01746413356269097
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "m",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.017475732858141527
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.01745670221741551
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.017444669275086474
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.017459509805281628
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.01745670221741551
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.017475135591063
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.01745670221741551
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.01744466927508647
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.01745937373061777
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.017444669275086474
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "ape_yaw_rmse": {
+      "available_n": 10,
+      "mean": 0.0075663565276692935,
+      "sample_std": 9.348745791846602e-06,
+      "median": 0.0075702721153591565,
+      "q1": 0.0075568396355143235,
+      "q3": 0.00757282031401086,
+      "iqr": 1.5980678496536373e-05,
+      "min": 0.007553380748668301,
+      "max": 0.007576376719459859,
+      "bootstrap_mean_95_ci": [
+        0.007560596173009489,
+        0.0075714947491681665
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "rad",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.007576376719459859
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.007572820314010859
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.007553380748668301
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.007567216296052218
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.00757282031401086
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.007573645156435866
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.007572820314010859
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.007553380748668358
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.007567723916707454
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.007553380748668301
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "ape_yaw_median": {
+      "available_n": 10,
+      "mean": 0.005687550142234698,
+      "sample_std": 9.441020167795483e-06,
+      "median": 0.005690772765108099,
+      "q1": 0.0056782855734309745,
+      "q3": 0.005695203399601723,
+      "iqr": 1.6917826170748107e-05,
+      "min": 0.00567426244084368,
+      "max": 0.005696082898535515,
+      "bootstrap_mean_95_ci": [
+        0.005681717446170564,
+        0.005692816554180753
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "rad",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.005691158417708841
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.005696082898535515
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.00567426244084368
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.005690354971192856
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.005696082898535515
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.0056925649028003455
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.005696082898535515
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.00567426244084368
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.005690387112507356
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.00567426244084368
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "rpe_1m_translation_rmse": {
+      "available_n": 10,
+      "mean": 0.016487480726059787,
+      "sample_std": 3.121481121837454e-05,
+      "median": 0.016500438738332256,
+      "q1": 0.016457894762150642,
+      "q3": 0.01650082015248675,
+      "iqr": 4.29253903361064e-05,
+      "min": 0.016443937187669337,
+      "max": 0.01652654958786563,
+      "bootstrap_mean_95_ci": [
+        0.01646802444259681,
+        0.016504651354985047
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "m",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.01652654958786563
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.01650082015248675
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.016443937187669337
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.016499767485594407
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.01650082015248675
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.016514160842491764
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.01650082015248675
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.016443937187669386
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.01650005732417776
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.016443937187669337
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "rpe_1m_rotation_rmse": {
+      "available_n": 10,
+      "mean": 0.00706197122173253,
+      "sample_std": 5.0611667194967586e-06,
+      "median": 0.007064120098044896,
+      "q1": 0.007056743275321243,
+      "q3": 0.007064993939460586,
+      "iqr": 8.250664139342924e-06,
+      "min": 0.007055026150232022,
+      "max": 0.007067943616025705,
+      "bootstrap_mean_95_ci": [
+        0.007058838497640326,
+        0.007064764173857213
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "rad",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0.007066567425003824
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0.007064993939460586
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0.007055026150232022
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.007063246256629206
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0.007064993939460586
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.007067943616025705
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0.007064993939460586
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.007055026150232105
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0.007061894650588658
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0.007055026150232023
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "active_cpu_mean": {
+      "available_n": 10,
+      "mean": 5.206314750353234,
+      "sample_std": 0.3150385870640365,
+      "median": 5.224135939187409,
+      "q1": 4.9622734455079485,
+      "q3": 5.3400161483520705,
+      "iqr": 0.37774270284412204,
+      "min": 4.76316333928635,
+      "max": 5.794537741180891,
+      "bootstrap_mean_95_ci": [
+        5.0273774432659,
+        5.395514394438925
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "percent_one_core",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 4.889422961430114
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 5.253433110547014
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 5.794537741180891
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 4.76316333928635
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 4.94100280152419
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 5.194838767827806
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 5.544586922741725
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 5.351994055936628
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 5.304082425598396
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 5.026085377459222
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "active_cpu_peak": {
+      "available_n": 10,
+      "mean": 14.75450844402404,
+      "sample_std": 0.9784811499728854,
+      "median": 13.999872785569394,
+      "q1": 13.99902345703125,
+      "q3": 15.860657839004844,
+      "iqr": 1.8616343819735945,
+      "min": 13.99627668342923,
+      "max": 15.99559311908986,
+      "bootstrap_mean_95_ci": [
+        14.190603961023838,
+        15.337235849978475
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "percent_one_core",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 15.913197581298762
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 15.940768472686129
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 15.703038612123086
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 13.998349735183782
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 15.99559311908986
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 13.99627668342923
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 13.999646451638089
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 13.99898958141712
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 13.99912508387364
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 14.000099119500698
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "active_rss_mean": {
+      "available_n": 10,
+      "mean": 46.680515420876404,
+      "sample_std": 0.4578786676487997,
+      "median": 46.72224738942003,
+      "q1": 46.32464413738434,
+      "q3": 47.037171648439966,
+      "iqr": 0.712527511055626,
+      "min": 46.018521808464484,
+      "max": 47.36695382614797,
+      "bootstrap_mean_95_ci": [
+        46.41052674308151,
+        46.94487179942634
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "MiB",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 46.694253976074926
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 46.07883191292635
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 46.2369580670328
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 46.750240802765134
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 46.58770234843897
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 47.36695382614797
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 46.83961470762415
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 46.018521808464484
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 47.12905279724405
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 47.10302396204524
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "active_rss_peak": {
+      "available_n": 10,
+      "mean": 47.008984375,
+      "sample_std": 0.5030831118799034,
+      "median": 47.029296875,
+      "q1": 46.7412109375,
+      "q3": 47.3369140625,
+      "iqr": 0.595703125,
+      "min": 46.234375,
+      "max": 47.8125,
+      "bootstrap_mean_95_ci": [
+        46.708203125,
+        47.301171875
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "MiB",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 46.94921875
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 46.234375
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 46.671875
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 47.0859375
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 46.97265625
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 47.8125
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 47.15234375
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 46.30859375
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 47.3984375
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 47.50390625
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "graph_nodes": {
+      "available_n": 10,
+      "mean": 10,
+      "sample_std": 0.0,
+      "median": 10.0,
+      "q1": 10.0,
+      "q3": 10.0,
+      "iqr": 0.0,
+      "min": 10,
+      "max": 10,
+      "bootstrap_mean_95_ci": [
+        10.0,
+        10.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 10
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "graph_edges": {
+      "available_n": 10,
+      "mean": 13,
+      "sample_std": 0.0,
+      "median": 13.0,
+      "q1": 13.0,
+      "q3": 13.0,
+      "iqr": 0.0,
+      "min": 13,
+      "max": 13,
+      "bootstrap_mean_95_ci": [
+        13.0,
+        13.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 13
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 13
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "observed_scan_topic_messages": {
+      "available_n": 10,
+      "mean": 1022,
+      "sample_std": 0.0,
+      "median": 1022.0,
+      "q1": 1022.0,
+      "q3": 1022.0,
+      "iqr": 0.0,
+      "min": 1022,
+      "max": 1022,
+      "bootstrap_mean_95_ci": [
+        1022.0,
+        1022.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 1022
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 1022
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "tf_rejection_log_lines": {
+      "available_n": 10,
+      "mean": 0,
+      "sample_std": 0.0,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "min": 0,
+      "max": 0,
+      "bootstrap_mean_95_ci": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "queue_full_warning_log_lines": {
+      "available_n": 10,
+      "mean": 0,
+      "sample_std": 0.0,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "min": 0,
+      "max": 0,
+      "bootstrap_mean_95_ci": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 0
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 0
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "graph_insertions": {
+      "available_n": 10,
+      "mean": 10,
+      "sample_std": 0.0,
+      "median": 10.0,
+      "q1": 10.0,
+      "q3": 10.0,
+      "iqr": 0.0,
+      "min": 10,
+      "max": 10,
+      "bootstrap_mean_95_ci": [
+        10.0,
+        10.0
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "count",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 10
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 10
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "playback_real_time_factor": {
+      "available_n": 10,
+      "mean": 1.000000921385816,
+      "sample_std": 1.3197705623522827e-06,
+      "median": 1.0000012369758022,
+      "q1": 0.999999821438933,
+      "q3": 1.0000018324978355,
+      "iqr": 2.0110589025179593e-06,
+      "min": 0.9999985911315172,
+      "max": 1.000002433445628,
+      "bootstrap_mean_95_ci": [
+        1.0000001227725341,
+        1.0000016483675263
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "ratio",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 1.000002433445628
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 1.0000007318770336
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 1.0000018331036467
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 0.9999985911315172
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 1.0000015944615215
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 0.9999995151154154
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 1.0000018306804017
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 0.9999995179595661
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 1.000002286593347
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 1.0000008794900828
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "active_playback_wall_duration": {
+      "available_n": 10,
+      "mean": 204.2897473542078,
+      "sample_std": 0.00025030918725901585,
+      "median": 204.28971894900315,
+      "q1": 204.2896099252539,
+      "q3": 204.2899149882869,
+      "iqr": 0.0003050630330108106,
+      "min": 204.2893425319926,
+      "max": 204.29018340900075,
+      "bootstrap_mean_95_ci": [
+        204.28960331243974,
+        204.28989578997397
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "s",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 204.2893425319926
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 204.2897837019991
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 204.28961356496438
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 204.29018340900075
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 204.28965419600718
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 204.28991748503176
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 204.28960871201707
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 204.28996320802253
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 204.28949923499022
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 204.28990749805234
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "slam_process_wall_duration": {
+      "available_n": 10,
+      "mean": 220.60722572031082,
+      "sample_std": 0.16142595525161751,
+      "median": 220.6843204210163,
+      "q1": 220.42681421275483,
+      "q3": 220.74628100803238,
+      "iqr": 0.31946679527754895,
+      "min": 220.41490263299784,
+      "max": 220.77793232299155,
+      "bootstrap_mean_95_ci": [
+        220.51141380000044,
+        220.70069631810765
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "s",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 220.42353657097556
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 220.77793232299155
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 220.68813130102353
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 220.6921201570076
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 220.76433462504065
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 220.42165102198487
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 220.6805095410091
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 220.41490263299784
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 220.77249189198483
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 220.43664713809267
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    },
+    "bag_simulation_duration": {
+      "available_n": 10,
+      "mean": 204.313,
+      "sample_std": 0.0,
+      "median": 204.313,
+      "q1": 204.313,
+      "q3": 204.313,
+      "iqr": 0.0,
+      "min": 204.313,
+      "max": 204.313,
+      "bootstrap_mean_95_ci": [
+        204.313,
+        204.313
+      ],
+      "bootstrap_valid_resamples": 20000,
+      "unit": "s",
+      "individual_values": [
+        {
+          "run_id": "run_001",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_002",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_003",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_004",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_005",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_006",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_007",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_008",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_009",
+          "success": true,
+          "value": 204.313
+        },
+        {
+          "run_id": "run_011",
+          "success": true,
+          "value": 204.313
+        }
+      ],
+      "run_success_rate": 1.0,
+      "availability_rate": 1.0,
+      "unavailable_runs": []
+    }
+  },
+  "statistics_method": {
+    "unit_of_analysis": "One run; no pooling of trajectory samples across runs",
+    "mean_std": "Arithmetic mean and sample standard deviation (ddof=1)",
+    "quantiles": "Median and linear interpolation at (N-1)*p for quartiles; IQR=Q3-Q1",
+    "bootstrap": "Percentile 95% CI for the mean of run-level metric; 20,000 resamples of the ten run indices with replacement",
+    "bootstrap_seed_base": 20260915,
+    "bootstrap_seed_per_metric": "base + metric index in report order",
+    "missing_values": "All ten values retained, including null for unmeasurable failed runs. Summaries are conditional on available values, including any measured values from failures. Nulls are not imputed; empty bootstrap samples excluded and counted. Success/coverage reported over all ten runs.",
+    "success_interval": "Wilson binomial 95% interval, not a degenerate all-success bootstrap interval",
+    "no_retries": true
+  },
+  "observability_notes": [
+    "1022 bag scans is input, and observed_scan_topic_messages is the independent monitor count, not SLAM callback entries.",
+    "Graph nodes and /pose-correlated graph insertions are not processed-scan counters.",
+    "TF rejection and queue-full quantities are observed log-line counts; TF MessageFilter logs are throttled at 2500 ms and exact rejection/skip counts are unavailable.",
+    "ATE/yaw/RPE errors are conditional on reported coverage and use the unchanged frozen SE(2), exact timestamp association and 1 m RPE methodology.",
+    "Bootstrap intervals quantify run-to-run variability for this fixed bag/procedure, not generalization to other routes or worlds."
+  ],
+  "cohort_adjudication": {
+    "cohort_status": "CURRENT_VALID_R3_BASELINE",
+    "included_runs": [
+      "run_001",
+      "run_002",
+      "run_003",
+      "run_004",
+      "run_005",
+      "run_006",
+      "run_007",
+      "run_008",
+      "run_009",
+      "run_011"
+    ],
+    "excluded_runs": [
+      "run_010"
+    ],
+    "total_recorded_attempts": 11,
+    "valid_trials": 10,
+    "invalid_trials": 1,
+    "replacement_policy": "Exactly one user-authorized replacement; no automatic retries.",
+    "invalidity_reason": "Confirmed concurrent external rosbag playback; user adjudicated original run_010 invalid. Direct TF receipt was not captured, as documented in forensic evidence.",
+    "original_outputs": "Preserved byte-for-byte, including original run success fields and superseded aggregate reports.",
+    "methodology_changes": null
+  }
+}

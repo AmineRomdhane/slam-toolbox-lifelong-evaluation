@@ -1,63 +1,26 @@
 # slam_eval_route_controller
 
-Runs predefined YAML routes using `/ground_truth/pose` feedback and
-`geometry_msgs/msg/TwistStamped` commands on `/cmd_vel`. No scan, odometry,
-TF lookup, or SLAM feedback is used. R1 geometry is in `routes/r1.yaml`;
-`route_file` selects another definition.
+Node `route_controller`: YAML route control from `/ground_truth/pose`, publishing
+`geometry_msgs/TwistStamped` on `/cmd_vel` and JSON state on `/route/status`.
+No scan, odometry, TF or SLAM feedback. Stop-and-turn motion uses bounded acceleration;
+final correction requires position and yaw within tolerance under one shared timeout.
 
-## Run
-
-Start TurtleBot3 World and the ground-truth extractor first. In a clean shell:
+Authoritative [routes](../../benchmark/routes/r1.yaml) live in `benchmark/routes/`.
+CMake installs them into the package share directory; `route_file` selects a YAML.
+The default remains installed `routes/r1.yaml`. Installed files are build artifacts,
+not independent configuration sources. Build this package within this repository.
 
 ```bash
-source /opt/ros/jazzy/setup.bash
-source ~/slam_testing/install/local_setup.bash
 ros2 run slam_eval_route_controller route_controller --ros-args \
-  -p use_sim_time:=true -p output_dir:=/tmp/r1_trial_unique
+  -p use_sim_time:=true -p output_dir:=/tmp/unique_route_trial
 ```
 
-The output directory must not exist. It receives the exact actual start pose,
-configuration, full GT trajectory, commands and summary metrics. `/route/status`
-publishes JSON with route ID, waypoint, elapsed simulation time, errors and state
-(WAITING, ROTATING, TRANSLATING, COMPLETED, ABORTED).
+Defaults: linear/angular limits 0.10 m/s and 0.30 rad/s; accelerations 0.10 m/s² and
+0.30 rad/s²; position/yaw tolerances 0.015 m/rad; waypoint/final-correction timeout
+90 simulation seconds; tracking-error limit 0.20 m; feedback timeout 0.50 simulation
+seconds and 2-second wall watchdog. Abort commands zero immediately; no obstacle avoidance.
+The output directory must be new and retains actual start pose, trajectory and status.
 
-## Control and limits
-
-Stop-and-turn waypoint control uses bounded command acceleration and decelerates
-on approach. After final yaw correction, position is checked again; if needed,
-the same final waypoint is approached again and final yaw is restored. Completion
-requires both tolerances in the same GT sample. Corrective translations target
-10% of the position tolerance to leave margin for rotation-induced drift; ordinary
-waypoint approaches and the final acceptance tolerances are unchanged. All final corrections share one
-`waypoint_timeout` starting at the first final yaw phase; retries never extend it.
-
-| Parameter | Default |
-|---|---:|
-| max_linear_velocity | 0.10 m/s |
-| max_angular_velocity | 0.30 rad/s |
-| max_linear_acceleration | 0.10 m/s² |
-| max_angular_acceleration | 0.30 rad/s² |
-| position_tolerance | 0.015 m |
-| heading_tolerance | 0.015 rad |
-| waypoint_timeout | 90 simulation s |
-| max_tracking_error | 0.20 m |
-| feedback_timeout | 0.50 simulation s |
-
-Tracking error is distance to the active finite nominal segment. Tracking-limit
-violations, timeout, invalid frame/feedback, time resets and feedback loss abort;
-a wall watchdog also detects two seconds without feedback after starting.
-Safety aborts command zero immediately. There is no obstacle avoidance.
-
-## Validation
-
-```bash
-cd ~/slam_testing
-colcon build --packages-select slam_eval_route_controller --symlink-install --cmake-args -DBUILD_TESTING=ON
-ctest --test-dir build/slam_eval_route_controller --output-on-failure
-```
-
-The local harness `scripts/run_validation.py OUTPUT_DIRECTORY --runs 3` uses a
-fresh simulator process per trial (with TurtleBot3 and evaluation overlays sourced).
-`scripts/analyze_validation.py OUTPUT_DIRECTORY` compares saved trajectories.
-Detailed protocols, measurements and limitations are in [VALIDATION.md](VALIDATION.md).
-No rosbag or SLAM process is started by these scripts.
+See [build/test](../../docs/reproducibility.md),
+[validation details](../../docs/validation/route_controller.md), and the
+[fresh-world validation harness](../../benchmark/tools/validation/run_validation.py).
